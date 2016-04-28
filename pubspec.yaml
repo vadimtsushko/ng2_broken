@@ -11,8 +11,6 @@ dependencies:
   quiver_log: '>=1.0.3'
   bootstrap:
     git: 'https://github.com/vadimtsushko/bootstrap_for_pub.git'
-dependency_overrides:
-  uri: 0.11.0
 transformers:
 - angular2:
     platform_directives:
