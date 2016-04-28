@@ -1,41 +1,7 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Collect the nav links, forms, and other content for toggling -->
-
-        <div class="navbar-header">
-            <a class="navbar-brand" [routerLink]="['Home']">BrokenNG2</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <!--<li class="dropdown">-->
-                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Настройки автозаказа <span class="caret"></span></a>-->
-                <!--<ul class="dropdown-menu">-->
-                    <!--<li><a [routerLink]="['CurrentBuffer', {mode: 'notApproved'}]">Неутвержденный буфер</a></li>-->
-                    <!--<li><a [routerLink]="['CurrentBuffer']">Значения буфера</a></li>-->
-                    <!--<li role="separator" class="divider"></li>-->
-                    <!--<li><a [routerLink]="['Action']">Маркетинговые акции</a></li>-->
-                    <!--&lt;!&ndash;<li><a href="#">Заказы</a></li>&ndash;&gt;-->
-                <!--</ul>-->
-            <!--</li>-->
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Some actions <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <!--<li><a [routerLink]="['Vendor']">Поставщики</a></li>-->
-                    <!--<li><a [routerLink]="['Department']">Магазины</a></li>-->
-                    <!--<li><a [routerLink]="['InventRange']">Иерархия номенклатуры</a></li>-->
-                    <!--<li><a [routerLink]="['Invent']">Номенклатура</a></li>-->
-                    <!--<li role="separator" class="divider"></li>-->
-                    <li><a [routerLink]="['About']">About</a></li>
-                </ul>
-            </li>
-            <!--<li><a href="#/overview"><span class="glyphicon glyphicon-home navicon" aria-hidden="true"></span>   Home</a></li>-->
-        </ul>
-        <h4 class="navbar-text" style="text-align: center; padding-left: 160px">
-            {{title}}
-        </h4>
-    </div><!-- /.container-fluid -->
-</nav>
+<a [routerLink]="['Home']">Home</a>
+<a [routerLink]="['About']">About</a>
 
 
-<div class="container-fluid">
+<div >
     <router-outlet></router-outlet>
 </div>

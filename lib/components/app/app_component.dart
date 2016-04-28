@@ -5,7 +5,7 @@ import 'package:angular2/router.dart';
 
 import '../about/about.dart';
 import '../home/home_component.dart';
-import '../common/base_component.dart';
+import '../common/logger.dart';
 
 import '../../service/event_bus.dart';
 import 'dart:async';
@@ -21,21 +21,23 @@ import 'dart:async';
   const Route(path: '/', name: 'Home', component: HomeComponent),
 
 ])
-class AppComponent  extends BaseComponent implements OnInit {
+class AppComponent  implements OnInit {
   String title = 'Начальная строаница';
   List<Map> alerts = [];
   bool isLoaded = false;
   bool hasErrors = false;
   bool get showApp => isLoaded;
   EventBus eventBus;
-
-  AppComponent(this.eventBus);
+  Logger logger;
+  AppComponent(this.eventBus) {
+    logger = getLogger('AppComponent');
+  }
 
   ngOnInit() {
     eventBus.appTitle.listen(setTitle);
   }
   setTitle(String event) {
-    logger.fine('setTitle $event');
+    logger.info('setTitle $event');
     scheduleMicrotask(() {
       title = event;
     });
