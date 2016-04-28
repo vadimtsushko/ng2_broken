@@ -1,0 +1,20 @@
+name: instock
+description: Minimal angular2 application, failing on the dart2js
+version: 0.0.1
+environment:
+  sdk: '>=1.13.0 <2.0.0'
+dependencies:
+  angular2: 2.0.0-beta.16
+  browser: ^0.10.0
+  dart_to_js_script_rewriter: ^1.0.1
+  logging: any
+  quiver_log: '>=1.0.3'
+  bootstrap:
+    git: 'https://github.com/vadimtsushko/bootstrap_for_pub.git'
+dependency_overrides:
+  uri: 0.11.0
+transformers:
+- angular2:
+    platform_directives:
+      - package:angular2/common.dart#COMMON_DIRECTIVES
+    entry_points: web/main.dart,
